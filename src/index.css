@@ -9,3 +9,7 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
+.active {
+  @apply text-primary font-bold border-b-2 border-primary;
+}
