@@ -6,7 +6,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 
 const MobileMenuBtn = ({ clickHandler }) => {
   return (
-    <button onClick={clickHandler}>
+    <button className="lg:hidden" onClick={clickHandler}>
       <AiOutlineMenu className="text-3xl text-primary"></AiOutlineMenu>
     </button>
   );

@@ -9,6 +9,7 @@ export default {
       },
       colors: {
         primary: "#FF444A",
+        textPrimary: "#0B0B0B",
       },
       borderRadius: {
         default: "8px",

@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 
 function Root() {
   return (
-    <div>
+    <div className="text-textPrimary">
       <Header></Header>
       <Outlet></Outlet>
     </div>
