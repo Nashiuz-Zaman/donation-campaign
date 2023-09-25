@@ -10,6 +10,9 @@ export default {
       colors: {
         primary: "#FF444A",
       },
+      borderRadius: {
+        default: "8px",
+      },
     },
   },
   plugins: [],
