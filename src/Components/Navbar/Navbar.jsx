@@ -5,13 +5,13 @@ import PropTypes from "prop-types";
 import DesktopNavigation from "../DesktopNavigation/DesktopNavigation";
 import BrandLogo from "../BrandLogo/BrandLogo";
 
-const Navbar = ({ imgSrc, navigatonOptions }) => {
+const Navbar = ({ imgSrc, navigationOptions }) => {
   return (
     <nav className="flex items-center justify-between pt-[3.125rem]">
       {/* website logo */}
       <BrandLogo imgSrc={imgSrc}></BrandLogo>
       <DesktopNavigation
-        navigatonOptions={navigatonOptions}
+        navigationOptions={navigationOptions}
       ></DesktopNavigation>
     </nav>
   );
@@ -19,7 +19,7 @@ const Navbar = ({ imgSrc, navigatonOptions }) => {
 
 Navbar.propTypes = {
   imgSrc: PropTypes.string.isRequired,
-  navigatonOptions: PropTypes.array.isRequired,
+  navigationOptions: PropTypes.array.isRequired,
 };
 
 export default Navbar;

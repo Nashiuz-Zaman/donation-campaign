@@ -4,11 +4,11 @@ import PropTypes from "prop-types";
 // components
 import { NavLink } from "react-router-dom";
 
-const DesktopNavigation = ({ navigatonOptions }) => {
+const DesktopNavigation = ({ navigationOptions }) => {
   return (
     <ul className="hidden lg:flex gap-[3.0625rem]">
-      {navigatonOptions &&
-        navigatonOptions.map((option) => {
+      {navigationOptions &&
+        navigationOptions.map((option) => {
           return (
             <li key={option.id}>
               <NavLink className="text-lg leading-[normal]" to={option.url}>
@@ -22,7 +22,7 @@ const DesktopNavigation = ({ navigatonOptions }) => {
 };
 
 DesktopNavigation.propTypes = {
-  navigatonOptions: PropTypes.array.isRequired,
+  navigationOptions: PropTypes.array.isRequired,
 };
 
 export default DesktopNavigation;

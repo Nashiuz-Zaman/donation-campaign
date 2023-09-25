@@ -14,7 +14,7 @@ const Header = () => {
       <Container>
         <Navbar
           imgSrc={brandLogo}
-          navigatonOptions={navigationOptions}
+          navigationOptions={navigationOptions}
         ></Navbar>
       </Container>
     </header>
