@@ -5,6 +5,9 @@ import PropTypes from "prop-types";
 import HeadingSecondary from "../HeadingSecondary/HeadingSecondary";
 import Description from "../Description/Description";
 
+// hook
+import useDonationContext from "../../hooks/useDonationContext";
+
 const DonationDetails = ({ donationInfo }) => {
   const {
     id,
@@ -14,6 +17,8 @@ const DonationDetails = ({ donationInfo }) => {
     picture_detailed,
     price,
   } = donationInfo;
+
+  const { addToSavedDonations } = useDonationContext();
 
   return (
     <div className="mt-20 mb-[7.625rem]">
@@ -28,6 +33,9 @@ const DonationDetails = ({ donationInfo }) => {
 
         <div className="p-[2.3125rem] bg-[#0b0b0b80] absolute bottom-0 left-0 w-full">
           <button
+            onClick={() => {
+              addToSavedDonations(id);
+            }}
             style={{ backgroundColor: text_button_bg_color }}
             className="text-white font-semibold text-xl px-[1.625rem] py-4 rounded-[4px]"
           >
