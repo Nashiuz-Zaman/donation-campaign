@@ -8,7 +8,7 @@ import SearchForm from "../SearchForm/SearchForm";
 const Banner = ({ backgroundImgSrc, headingText }) => {
   return (
     <div
-      className="bg-center bg-cover bg-no-repeat pt-[7.5rem] pb-[13.125rem]"
+      className="bg-center bg-cover bg-no-repeat pt-[7.5rem] pb-[13.125rem] px-[2rem] lg:px-0"
       style={{
         backgroundImage: backgroundImgSrc,
       }}

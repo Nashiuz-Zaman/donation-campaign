@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const BrandLogo = ({ imgSrc }) => {
   return (
-    <div className="h-[4.5rem]">
+    <div className="h-[2.5rem] md:h-[4.5rem]">
       <img className="block h-full" src={imgSrc} alt="Brand Logo" />
     </div>
   );

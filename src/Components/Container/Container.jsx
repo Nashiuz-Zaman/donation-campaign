@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 
 const Container = ({ children }) => {
   return (
-    <div className="px-[2rem] max-w-[90rem] 2xl:px-0 3xl:max-w-[102.5rem] mx-auto">
-      {children}
-    </div>
+    <div className="px-[1rem] max-w-[82.5rem] 2xl:px-0 mx-auto">{children}</div>
   );
 };
 

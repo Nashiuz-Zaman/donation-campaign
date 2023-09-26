@@ -6,7 +6,7 @@ import Root from "../Components/Root/Root";
 
 // pages
 import Home from "../pages/Home/Home";
-import Donation from "../pages/Donation/Donation";
+import DonationsPage from "../pages/DonationsPage/DonationsPage";
 import Statistics from "../pages/Statistics/Statistics";
 
 export const router = createBrowserRouter([
@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
           return fetch("./donationData.json");
         },
       },
-      { path: "/donations", element: <Donation></Donation> },
+      { path: "/donations", element: <DonationsPage></DonationsPage> },
       { path: "/statistics", element: <Statistics></Statistics> },
     ],
   },
