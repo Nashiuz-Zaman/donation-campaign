@@ -8,6 +8,7 @@ import Root from "../Components/Root/Root";
 import Home from "../pages/Home/Home";
 import DonationsPage from "../pages/DonationsPage/DonationsPage";
 import Statistics from "../pages/Statistics/Statistics";
+import DonationDetailsPage from "../pages/DonationDetailsPage/DonationDetailsPage";
 
 export const router = createBrowserRouter([
   {
@@ -17,12 +18,15 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => {
-          return fetch("./donationData.json");
-        },
+        loader: () => fetch("/donationData.json").then((res) => res.json()),
       },
       { path: "/donations", element: <DonationsPage></DonationsPage> },
       { path: "/statistics", element: <Statistics></Statistics> },
+      {
+        path: "/donation/:id",
+        element: <DonationDetailsPage></DonationDetailsPage>,
+        loader: () => fetch("/donationData.json"),
+      },
     ],
   },
 ]);

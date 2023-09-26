@@ -1,5 +1,5 @@
 // react
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
 // components
@@ -10,9 +10,13 @@ import Container from "../../Components/Container/Container";
 // home page
 const Home = () => {
   const donations = useLoaderData();
-  const [displayDonations, setDisplayDonations] = useState(donations);
+  const [displayDonations, setDisplayDonations] = useState([]);
 
-  console.log(displayDonations);
+  useEffect(() => {
+    if (donations && Array.isArray(donations)) {
+      setDisplayDonations(donations);
+    }
+  }, [donations]);
 
   // pass variables to reusable banner component
   const headingText = "I Grow By Helping People In Need";
