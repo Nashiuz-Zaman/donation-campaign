@@ -17,6 +17,9 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => {
+          return fetch("./donationData.json");
+        },
       },
       { path: "/donations", element: <Donation></Donation> },
       { path: "/statistics", element: <Statistics></Statistics> },
