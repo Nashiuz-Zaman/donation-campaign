@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 // components
 import HeadingPrimary from "../HeadingPrimary/HeadingPrimary";
+import SearchForm from "../SearchForm/SearchForm";
 
 const Banner = ({ backgroundImgSrc, headingText }) => {
   return (
@@ -13,6 +14,7 @@ const Banner = ({ backgroundImgSrc, headingText }) => {
       }}
     >
       <HeadingPrimary headingText={headingText}></HeadingPrimary>
+      <SearchForm></SearchForm>
     </div>
   );
 };
