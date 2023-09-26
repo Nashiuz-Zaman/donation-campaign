@@ -1,5 +1,31 @@
+// react
+import { useLoaderData } from "react-router-dom";
+
+// components
+import SavedDonations from "../../Components/SavedDonations/SavedDonations";
+import Container from "../../Components/Container/Container";
+
+// hook
+import useDonationContext from "../../hooks/useDonationContext";
+
 const DonationsPage = () => {
-  return <div>Donations page</div>;
+  // get the loaded data
+  const donations = useLoaderData();
+  // extract the custom function to retreive data from local storage
+  const { getSavedDonations } = useDonationContext();
+
+  const savedDonations = getSavedDonations();
+
+  // use filter method to get the donation objects for the saved ids
+  const donationsToShow = donations.filter((donation) =>
+    savedDonations.includes(donation.id)
+  );
+
+  return (
+    <Container>
+      <SavedDonations savedDonationsInfo={donationsToShow}></SavedDonations>
+    </Container>
+  );
 };
 
 export default DonationsPage;

@@ -10,6 +10,10 @@ import DonationsPage from "../pages/DonationsPage/DonationsPage";
 import Statistics from "../pages/Statistics/Statistics";
 import DonationDetailsPage from "../pages/DonationDetailsPage/DonationDetailsPage";
 
+const loaderFunction = () => {
+  return fetch("/donationData.json");
+};
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -18,14 +22,19 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("/donationData.json").then((res) => res.json()),
+        loader: loaderFunction,
       },
-      { path: "/donations", element: <DonationsPage></DonationsPage> },
+      {
+        path: "/donations",
+        element: <DonationsPage></DonationsPage>,
+        loader: loaderFunction,
+      },
+
       { path: "/statistics", element: <Statistics></Statistics> },
       {
         path: "/donation/:id",
         element: <DonationDetailsPage></DonationDetailsPage>,
-        loader: () => fetch("/donationData.json"),
+        loader: loaderFunction,
       },
     ],
   },
