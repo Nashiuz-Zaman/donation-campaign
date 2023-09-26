@@ -8,7 +8,7 @@ import MobileMenuCloseBtn from "../MobileMenuCloseBtn/MobileMenuCloseBtn";
 const MobileNavigation = ({ navigationOptions, closeNavFunc, openState }) => {
   return (
     <div
-      className={`block lg:hidden h-screen fixed top-0 right-0 w-full -translate-y-full transition-all duration-300 ${
+      className={`block lg:hidden h-screen fixed top-0 right-0 w-full -translate-y-full transition-all duration-300 z-50 ${
         openState ? "!translate-y-0" : ""
       } text-center p-8 bg-gray-100`}
     >
