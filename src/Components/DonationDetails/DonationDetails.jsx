@@ -22,8 +22,8 @@ const DonationDetails = ({ donationInfo }) => {
 
   return (
     <div>
-      <div className="relative rounded-default overflow-hidden mb-[3.5rem]">
-        <div className="max-w-[82.5rem] aspect-[1.89/1]">
+      <div className="relative rounded-default overflow-hidden md:mb-[3.5rem]">
+        <div className="max-w-[82.5rem] aspect-[1.89/1] rounded-default overflow-hidden">
           <img
             className="object-cover w-full h-full"
             src={picture_detailed}
@@ -31,13 +31,13 @@ const DonationDetails = ({ donationInfo }) => {
           />
         </div>
 
-        <div className="p-[2.3125rem] bg-[#0b0b0b80] absolute bottom-0 left-0 w-full">
+        <div className="p-[2.3125rem] md:bg-[#0b0b0b80] md:absolute md:bottom-0 md:left-0 w-full">
           <button
             onClick={() => {
               addToSavedDonations(id);
             }}
             style={{ backgroundColor: text_button_bg_color }}
-            className="text-white font-semibold text-xl px-[1.625rem] py-4 rounded-[4px]"
+            className="text-white font-semibold text-xl px-[1.625rem] py-4 rounded-[4px] block mx-auto md:mx-0"
           >
             Donate ${price}
           </button>
