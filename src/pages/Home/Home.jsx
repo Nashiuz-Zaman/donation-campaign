@@ -11,12 +11,25 @@ import Container from "../../Components/Container/Container";
 const Home = () => {
   const donations = useLoaderData();
   const [displayDonations, setDisplayDonations] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     if (donations && Array.isArray(donations)) {
       setDisplayDonations(donations);
     }
   }, [donations]);
+
+  const search = () => {
+    const filtered = donations.filter((donation) => {
+      return donation.category.toLowerCase() === searchTerm.toLowerCase();
+    });
+
+    if (filtered.length > 0) {
+      setDisplayDonations(filtered);
+    } else {
+      setDisplayDonations(donations);
+    }
+  };
 
   // pass variables to reusable banner component
   const headingText = "I Grow By Helping People In Need";
@@ -27,6 +40,8 @@ const Home = () => {
     <div>
       <section className="mb-[6.25rem]">
         <Banner
+          searchFunc={search}
+          setSearchTerm={setSearchTerm}
           backgroundImgSrc={backgroundImg}
           headingText={headingText}
         ></Banner>

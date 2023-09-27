@@ -5,6 +5,14 @@ import PropTypes from "prop-types";
 import SavedDonation from "../SavedDonation/SavedDonation";
 
 const SavedDonations = ({ savedDonationsInfo }) => {
+  if (savedDonationsInfo.length === 0) {
+    return (
+      <p className="text-center font-semibold mt-[10rem]">
+        You have not made any donations yet.
+      </p>
+    );
+  }
+
   return (
     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {savedDonationsInfo &&
