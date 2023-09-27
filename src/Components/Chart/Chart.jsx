@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 
 // recharts
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
 const COLORS = ["#FF444A", "#00C49F"];
 
@@ -51,7 +51,6 @@ export default function Chart({ yourDonation, totalDonation }) {
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
-        <Tooltip />
       </PieChart>
     </ResponsiveContainer>
   );
