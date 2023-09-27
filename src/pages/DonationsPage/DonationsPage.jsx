@@ -22,9 +22,11 @@ const DonationsPage = () => {
   );
 
   return (
-    <Container>
-      <SavedDonations savedDonationsInfo={donationsToShow}></SavedDonations>
-    </Container>
+    <div className="mt-20 mb-[9.625rem]">
+      <Container>
+        <SavedDonations savedDonationsInfo={donationsToShow}></SavedDonations>
+      </Container>
+    </div>
   );
 };
 

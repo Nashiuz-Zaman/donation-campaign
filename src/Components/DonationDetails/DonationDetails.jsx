@@ -21,7 +21,7 @@ const DonationDetails = ({ donationInfo }) => {
   const { addToSavedDonations } = useDonationContext();
 
   return (
-    <div className="mt-20 mb-[7.625rem]">
+    <div>
       <div className="relative rounded-default overflow-hidden mb-[3.5rem]">
         <div className="max-w-[82.5rem] aspect-[1.89/1]">
           <img

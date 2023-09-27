@@ -16,9 +16,11 @@ const DonationDetailsPage = () => {
   });
 
   return (
-    <Container>
-      <DonationDetails donationInfo={currentDonation}></DonationDetails>
-    </Container>
+    <div className="mt-20 mb-[7.625rem]">
+      <Container>
+        <DonationDetails donationInfo={currentDonation}></DonationDetails>
+      </Container>
+    </div>
   );
 };
 
