@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const SuccessToast = ({ showToast, closeToastFunc }) => {
   return (
     <div
-      className={`bg-green-600 fixed bottom-10 right-10 z-30 px-6 py-5 rounded-default opacity-0 collapse transition-all duration-300 ${
+      className={`bg-green-600 fixed left-1/2 md:left-[initial] -translate-x-1/2 md:translate-x-[initial] w-max bottom-10 md:right-10 z-30 px-6 py-5 rounded-default shadow-lg opacity-0 collapse transition-all duration-300 ${
         showToast && "!opacity-100 !visible"
       }`}
     >

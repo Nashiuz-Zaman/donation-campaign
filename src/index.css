@@ -13,3 +13,8 @@ body {
 .active {
   @apply text-primary font-bold border-b-2 border-primary;
 }
+
+.custom-chart {
+  width: 100%;
+  height: 100%;
+}
