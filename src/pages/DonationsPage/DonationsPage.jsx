@@ -30,20 +30,23 @@ const DonationsPage = () => {
     } else {
       setDisplayDonations(donationsToShow);
     }
-  }, [limitedView, donationsToShow]);
+  }, [limitedView]);
 
   return (
     <div className="mt-20 mb-[9.625rem]">
       <Container>
         <SavedDonations savedDonationsInfo={displayDonations}></SavedDonations>
-        <button
-          className={`bg-[#009444] text-white rounded-default px-7 py-[0.875rem] font-semibold leading-[normal] w-max block mx-auto mt-10 ${
-            !limitedView && "hidden"
-          }`}
-          onClick={() => setLimitedView(false)}
-        >
-          See All
-        </button>
+
+        {savedDonations.length > 4 && (
+          <button
+            className={`bg-[#009444] text-white rounded-default px-7 py-[0.875rem] font-semibold leading-[normal] w-max block mx-auto mt-10 ${
+              !limitedView && "hidden"
+            }`}
+            onClick={() => setLimitedView(false)}
+          >
+            See All
+          </button>
+        )}
       </Container>
     </div>
   );

@@ -5,10 +5,10 @@ import { useContext } from "react";
 import { DonationContext } from "../contexts/DonationContext";
 
 const useDonationContext = () => {
-  const { getSavedDonations, addToSavedDonations } =
+  const { getSavedDonations, addToSavedDonations, showToast, closeToast } =
     useContext(DonationContext);
 
-  return { getSavedDonations, addToSavedDonations };
+  return { getSavedDonations, addToSavedDonations, showToast, closeToast };
 };
 
 export default useDonationContext;
